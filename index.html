@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TongKimToan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle">
+
+        </div>
+        <header>
+        <a href="#" class="logo"><img src="logoo.png"></a>
+        <div class="toggle" onClick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">What's New</a></li>
+            <li><a href="https://www.facebook.com/kimtong.toan/">Contact</a></li>
+        </ul>
+        </header>
+
+        <div class="content">
+            <div class="textbox">
+                <h2>It's not just one People <br>It's <span>TongKimToan</span> </h2>
+                <p>Xin chào, các bạn đang xem qua sơ yếu lý lịch của một kẻ vừa đẹp trai vừa lạnh lùng. Rất vui được làm quen cùng các bạn.</p>
+                <a href="https://www.facebook.com/kimtong.toan/"><img src="facebook.png"></a>
+                <a href="https://www.instagram.com/_tkimtoan__/"><img src="instagram.png"></a>
+                <a href="https://github.com/toankimtong/"><img src="github.png"></a>
+                <a href="https://www.youtube.com/channel/UCtL89ash5MpqaJz48IJ20kg"><img src="youtube.png"></a>
+            </div>
+            <div class="imgBox">
+                <img src="img1.png" class="toto">
+            </div>
+        </div>
+
+        <ul class="thumb">
+            <li><img src="thumb1.png" onClick="imgSlider('img1.png');changeCircleColor('#544d54')"></li>
+            <li><img src="thumb3.png" onClick="imgSlider('img3.png');changeCircleColor('#a09d8a')"></li>
+            <li><img src="thumb4.png" onClick="imgSlider('img4.png');changeCircleColor('#a16135')"></li>
+            <li><img src="thumb5.png" onClick="imgSlider('img5.png');changeCircleColor('#9d9393')"></li>
+        </ul>
+
+
+
+        
+
+    </section>
+    <script type="text/javascript">
+    function imgSlider(anything){
+        document.querySelector('.toto').src = anything;
+    }
+    function changeCircleColor(color){
+        const circle = document.querySelector('.circle');
+        circle.style.background = color;
+    }
+    function toggleMenu(){
+        var menuToggle = document.querySelector('.toggle');
+        var navigation = document.querySelector('.navigation');
+        menuToggle.classList.toggle('active');
+        navigation.classList.toggle('active');
+    }
+    </script>
+
+
+  
+    
+</body>
+</html>
